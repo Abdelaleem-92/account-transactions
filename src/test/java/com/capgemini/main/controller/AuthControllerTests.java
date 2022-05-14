@@ -41,7 +41,7 @@ class AuthControllerTests {
 	@Test
 	void should_Return400_When_BadRequest() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.post("/api/auth/signin").contentType(MediaType.APPLICATION_JSON)
-				.content("{\"username\": \"kuehneNagel\", \"password_Wrong\":\"WRONG_VALUE\"}"))
+				.content("{\"username\": \"capgemini\", \"password_Wrong\":\"WRONG_VALUE\"}"))
 				.andExpect((status().isBadRequest()));
 	}
 }
