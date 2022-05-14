@@ -1,0 +1,20 @@
+INSERT INTO roles (id, name) VALUES (1, 'ROLE_ALLOW_ADD');
+INSERT INTO roles (id, name) VALUES (2, 'ROLE_ALLOW_DELETE');
+INSERT INTO users (id, username, name, password) VALUES (1, 'capgemini_1', 'capgemini_1', '$2a$10$SOHI9jWCVxIJH/nFolJU3ONVzkDyr5KYtfuQpC21Qdn8btmtyumrK'); -- password is  "capgemini" 
+INSERT INTO users (id, username, name, password) VALUES (2, 'capgemini_2', 'capgemini_2', '$2a$10$SOHI9jWCVxIJH/nFolJU3ONVzkDyr5KYtfuQpC21Qdn8btmtyumrK');
+INSERT INTO users (id, username, name, password) VALUES (3, 'capgemini_3', 'capgemini_3', '$2a$10$SOHI9jWCVxIJH/nFolJU3ONVzkDyr5KYtfuQpC21Qdn8btmtyumrK');
+INSERT INTO users (id, username, name, password) VALUES (4, 'capgemini_4', 'capgemini_4', '$2a$10$SOHI9jWCVxIJH/nFolJU3ONVzkDyr5KYtfuQpC21Qdn8btmtyumrK');
+INSERT INTO user_roles (user_id, role_id) VALUES (1, 1);
+INSERT INTO user_roles (user_id, role_id) VALUES (1, 2);
+INSERT INTO user_roles (user_id, role_id) VALUES (2, 1);
+INSERT INTO user_roles (user_id, role_id) VALUES (2, 2);
+INSERT INTO user_roles (user_id, role_id) VALUES (3, 1);
+INSERT INTO user_roles (user_id, role_id) VALUES (3, 2);
+INSERT INTO user_roles (user_id, role_id) VALUES (4, 1);
+INSERT INTO user_roles (user_id, role_id) VALUES (4, 2);
+INSERT INTO accounts (id, user_id, created_date, balance) VALUES (1, 1, '2022-05-11 06:00:00.00', 200);
+INSERT INTO accounts (id, user_id, created_date, balance) VALUES (2, 1, '2022-05-12 06:00:00.00', 300);
+INSERT INTO accounts (id, user_id, created_date, balance) VALUES (3, 1, '2022-05-13 06:00:00.00', 150);
+INSERT INTO transactions(id, account_id, transaction_type, transaction_amount, transaction_datetime) VALUES (1, 1, 'CREDIT', 200, '2022-05-11 06:00:00.00');
+INSERT INTO transactions(id, account_id, transaction_type, transaction_amount, transaction_datetime) VALUES (2, 2, 'CREDIT', 300, '2022-05-12 06:00:00.00');
+INSERT INTO transactions(id, account_id, transaction_type, transaction_amount, transaction_datetime) VALUES (3, 3, 'CREDIT', 150, '2022-05-13 06:00:00.00');
